@@ -63,7 +63,7 @@ public class DialogueSequen : MonoBehaviour
         // [2] add greeting's next node: directionsVillage, with text: "Where is the village?" 
         greeting.AddNext(directionsVillage, "Where is the village?");
         // [3] add greeting's next node: directionsForest, with text: "How do I get to the forest?" 
-        greeting.AddNext(directionsForest, "How do I get to the forest?")
+        greeting.AddNext(directionsForest, "How do I get to the forest?");
         // [4] add greeting's next node: goodbye, with text: "Goodbye."
         greeting.AddNext(goodbye, "Goodbye.");
         // [5] add askForQuest's next node: questDenied, with text: "I’m ready for anything!"
