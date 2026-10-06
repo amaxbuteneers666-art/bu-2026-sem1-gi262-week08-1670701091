@@ -53,7 +53,7 @@ using UnityEngine.InputSystem;
             if (keyboard != null && keyboard.pKey.wasPressedThisFrame)
             {
                 attackSkillTree.rootSkill.PrintSkillTreeHierarchy("");
-                // attackSkillTree.rootSkill.PrintSkillTree();
+                //attackSkillTree.rootSkill.PrintSkillTree();
                 Debug.Log("====================================");
             } 
         }

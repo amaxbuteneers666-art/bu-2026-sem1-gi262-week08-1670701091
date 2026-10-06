@@ -50,13 +50,23 @@ public class Skill
     public void PrintSkillTree()
     {
         // 6. log the name of the skill, isAvailable, and isUnlocked
+        Debug.Log($"Skill: {name} avaiable: {isAvailable} unlocked: {isUnlocked}");
         // and call PrintSkillTree() on all nextSkills
+        for (int i = 0;i < nextSkills.Count; i++)
+        {
+            nextSkills[i] .PrintSkillTree();
+        }
     }
 
     public void PrintSkillTreeHierarchy(string indent)
     {
         // 7. log the name of the skill, isAvailable, and isUnlocked with indentation
         // and call PrintSkillTreeHierarchy() on all nextSkills
+        Debug.Log($"{indent}Skill: {name} avaiable: {isAvailable} unlocked: {isUnlocked}");
+        foreach (Skill skill in nextSkills)
+        {
+            skill.PrintSkillTreeHierarchy(indent + "====");
+        }
 
     }
 
