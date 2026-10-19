@@ -57,10 +57,13 @@ namespace Assignment
         private int SumOfNumbers(int[] numbers, int index)
         {
             // base case
-
+            if (index < 0)
+            {
+                return 0;
+            }
             // recursive case
-
-            return -1;
+            return numbers[index] + SumOfNumbers(numbers, index - 1);
+ 
         }
 
         #endregion
