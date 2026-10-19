@@ -86,7 +86,11 @@ namespace Assignment
 
         private bool IsPalindrome(string str, int start, int end)
         {
-            return false;
+            if (start >= end) return true;
+
+            if (str[start] != str[end]) return false;
+
+            return IsPalindrome(str, start + 1, end - 1);
         }
 
         public int ASN03_RecursiveGCD(int a, int b)
