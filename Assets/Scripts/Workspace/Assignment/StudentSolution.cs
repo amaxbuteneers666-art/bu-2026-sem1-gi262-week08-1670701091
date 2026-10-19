@@ -100,7 +100,9 @@ namespace Assignment
 
         private int GCD(int a, int b)
         {
-            return -1;
+            if (b == 0) return a;
+
+            return GCD(b, a % b);
         }
 
         public int ASN04_RecursiveBinarySearch(int[] arr, int target)
